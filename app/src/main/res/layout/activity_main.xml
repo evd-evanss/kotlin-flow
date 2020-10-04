@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.feed.FeedActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="230dp"
+        android:src="@drawable/ic_kotlin_flow"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/likeIv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="@dimen/vertical_margin_small"
+        android:src="@drawable/ic_like"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:tint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/likesTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_marginStart="@dimen/vertical_margin_small"
+        app:layout_constraintBottom_toBottomOf="@+id/likeIv"
+        app:layout_constraintStart_toEndOf="@+id/likeIv"
+        app:layout_constraintTop_toTopOf="@+id/likeIv"
+        tools:text="1" />
+
+    <ImageView
+        android:id="@+id/commentIv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="@dimen/vertical_margin_small"
+        android:src="@drawable/ic_comment"
+        app:layout_constraintStart_toEndOf="@+id/likeIv"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:tint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/commentsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/vertical_margin_small"
+        app:layout_constraintBottom_toBottomOf="@+id/likeIv"
+        app:layout_constraintStart_toEndOf="@+id/commentIv"
+        app:layout_constraintTop_toTopOf="@+id/likeIv"
+        tools:text="1" />
+
+    <ImageView
+        android:id="@+id/shareCountIv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="@dimen/vertical_margin_small"
+        android:src="@drawable/ic_share"
+        app:layout_constraintStart_toEndOf="@+id/commentIv"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:tint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/shareTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/vertical_margin_small"
+        app:layout_constraintBottom_toBottomOf="@+id/likeIv"
+        app:layout_constraintStart_toEndOf="@+id/shareCountIv"
+        app:layout_constraintTop_toTopOf="@+id/likeIv"
+        tools:text="1" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/vertical_margin_small"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/likeIv" />
+
+    <ImageView
+        android:id="@+id/likeButtonIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vertical_margin_small"
+        android:src="@drawable/ic_like"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Curtir"
+        app:layout_constraintBottom_toBottomOf="@+id/likeButtonIv"
+        app:layout_constraintEnd_toStartOf="@+id/commentButtonIv"
+        app:layout_constraintStart_toEndOf="@+id/likeButtonIv"
+        app:layout_constraintTop_toTopOf="@+id/likeButtonIv" />
+
+    <ImageView
+        android:id="@+id/commentButtonIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vertical_margin_small"
+        android:src="@drawable/ic_comment"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comentar"
+        app:layout_constraintBottom_toBottomOf="@+id/likeButtonIv"
+        app:layout_constraintEnd_toStartOf="@+id/shareIv"
+        app:layout_constraintStart_toEndOf="@+id/commentButtonIv"
+        app:layout_constraintTop_toTopOf="@+id/likeButtonIv" />
+
+    <ImageView
+        android:id="@+id/shareIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vertical_margin_small"
+        android:src="@drawable/ic_share"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Compartilhar"
+        app:layout_constraintBottom_toBottomOf="@+id/likeButtonIv"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@+id/shareIv"
+        app:layout_constraintTop_toTopOf="@+id/likeButtonIv" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/vertical_margin_small"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ProgressBar
+        android:id="@+id/loadingPb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
